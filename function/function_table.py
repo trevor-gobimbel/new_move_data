@@ -16,7 +16,16 @@ def old_table_name(old_database_name) :
     elif old_database_name == 'db_banksoalV2' :
         old_table_name = [
             "Bab", 
-            "Buku"
+            "Buku",
+            "TOB",
+            "isiTOB"
+            ]
+    elif old_database_name == 'db_GOIconsV2' :
+        old_table_name = [
+            "Bundling",
+            "isiProdukMix",
+            "mkt_JenisKelas",
+            "mkt_JenisProduk"
             ]
     return old_table_name
 
@@ -28,16 +37,21 @@ def database_name(old_database_name) :
         ]
     elif old_database_name == 'db_banksoalV2' :
         database_name = [
-            'materi'
+            'materi',
+            'product'
         ]
+    elif old_database_name == 'db_GOIconsV2' :
+        database_name = [
+            "product", 
+            ]
     else : 
         database_name = [
             'go',
             'kbm', 
             'materi', 
             'materi_teaser', 
-            'produk', 
-            'produk_teaser',
+            'product', 
+            'product_teaser',
             'pt', 
             'report_siswa_empati_mandiri', 
             'report_siswa_empati_wajib',
@@ -68,6 +82,15 @@ def table_name(database_name) :
             "bab", 
             "buku"
             ]
+    elif database_name == 'db_product' :
+        table_name = [
+            'tob',
+            "bundling",
+            "isi_produk_mix",
+            "isi_tob",
+            "jenis_kelas",
+            "jenis_produk"
+        ]
     elif database_name == 'db_report_siswa_peringkat' : 
         table_name = [
             "peringkat_new"
